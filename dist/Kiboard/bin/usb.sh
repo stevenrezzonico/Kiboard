@@ -26,7 +26,7 @@ on)
 	echo 0x1d6b >idVendor; echo 0x0105 >idProduct; echo 0x0200 >bcdUSB
 	mkdir strings/0x409
 	echo Kiboard >strings/0x409/manufacturer; echo "Kiboard keyboard and trackpad" >strings/0x409/product
-	echo KIBOARD0001 >strings/0x409/serialnumber
+	echo KIBOARD0002 >strings/0x409/serialnumber
 	mkdir functions/ffs.kiboard || exit 1
 	mkdir -p configs/c.1/strings/0x409; echo HID >configs/c.1/strings/0x409/configuration
 	ln -s $G/functions/ffs.kiboard configs/c.1/

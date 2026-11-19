@@ -68,7 +68,9 @@ The keyboard opens when the computer answers.
 - While Bluetooth mode waits for a computer, the Kindle accepts every pairing request without asking.
   Use it where you trust the people in radio range.
 - While Bluetooth mode is on, the Kindle's own Bluetooth (audio) is restarted twice and may drop.
-- No BIOS or boot-menu typing: the keyboard has no boot protocol.
+- BIOS and boot menus: in USB mode the keyboard has the boot protocol, but it is not known to work. On the
+  one computer tried (an HP laptop) the BIOS found the keyboard and took the Esc and F9 presses, then started
+  Windows as if no key was pressed. Bluetooth mode cannot work there: a BIOS has no Bluetooth.
 - One connection per run: to change from USB to Bluetooth, close Kiboard and open it again.
 
 ## Build (WSL)

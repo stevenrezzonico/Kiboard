@@ -238,6 +238,8 @@ int main(int argc, char **argv)
 	hid_mouse(rep, BTN_R, -3, 4, -1);
 	assert(!memcmp(rep, "\2\2\375\4\377", 5));
 	assert(hid_report_desc[hid_report_desc_len - 1] == 0xC0);
+	assert(hid_report_desc[HID_KBD_DESC_LEN - 1] == 0xC0 && hid_report_desc[HID_KBD_DESC_LEN] == 0x05);
+	assert(hid_report_desc[6] == 0x85 && hid_report_desc[HID_KBD_DESC_LEN + 6] == 0x85); /* usb.c cuts these report IDs out */
 	test_gesture();
 	test_ui();
 

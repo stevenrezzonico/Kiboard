@@ -8,6 +8,7 @@
 enum { MOD_CTRL = 0x01, MOD_SHIFT = 0x02, MOD_ALT = 0x04, MOD_GUI = 0x08 };
 enum { BTN_L = 1, BTN_R = 2 };
 
+#define HID_KBD_DESC_LEN 65 /* the keyboard's part of hid_report_desc; the mouse's part is the rest */
 extern const unsigned char hid_report_desc[];
 extern const int hid_report_desc_len;
 
